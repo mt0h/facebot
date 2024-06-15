@@ -1,0 +1,27 @@
+@import "../node_modules/@italodeandra/ui/base.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .menu-content {
+        @apply z-20 rounded-md p-2 shadow will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade
+        bg-zinc-50 text-zinc-900
+        dark:bg-zinc-800 dark:text-zinc-50
+    }
+
+    .menu-item {
+        @apply relative flex h-[25px] select-none items-center rounded-[3px] px-[5px] pl-[5px] text-[13px] leading-none outline-none
+        text-zinc-700
+        dark:text-zinc-300
+        data-[disabled]:text-zinc-300 data-[disabled]:pointer-events-none
+        dark:data-[disabled]:text-zinc-600
+        data-[highlighted]:text-onPrimary data-[highlighted]:bg-primary-500
+        dark:data-[highlighted]:text-onPrimary
+    }
+
+    .menu-arrow {
+        @apply fill-zinc-50 dark:fill-zinc-800
+    }
+}
